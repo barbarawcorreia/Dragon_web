@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :dragao_bases
 #get "[o nome que queremos para a URL]" => "[nome do Controller]#[nome da página]"
 get 'tamagoshi/world' => 'tamagoshi#world'
 get 'tamagoshi/play' => 'tamagoshi#play'

@@ -1,6 +1,6 @@
-class CreateDragons < ActiveRecord::Migration
+class CreateDragonBases < ActiveRecord::Migration
   def change
-    create_table :dragons do |t|
+    create_table :dragon_bases do |t|
       t.string :name
       t.string :owner_name
 

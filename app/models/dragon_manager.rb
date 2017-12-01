@@ -1,7 +1,7 @@
 class Dragon_manager
-    #CRIAR TESTES PARA ESSES ARQUIVOS. Ver como testar o model. 
-    def initialize(dragon,owner_name)
-    @dragon = dragon
+  #CRIAR TESTES PARA ESSES ARQUIVOS. Ver como testar o model.
+  def initialize(dragon,owner_name)
+    @name = name
     @owner_name = owner_name
     @asleep = false
     @stuff_in_belly = 10 # He's full.
@@ -72,4 +72,3 @@ class Dragon_manager
   end
 end
 
-end

@@ -1,7 +1,7 @@
 class Dragon
   attr_accessor :name,:owner_name,:stuff_in_intestine,:stuff_in_belly,:asleep
-  def initialize(dragon,owner_name)
-    @dragon = dragon
+  def initialize(name,owner_name)
+    @name = name
     @owner_name = owner_name
     @asleep = false
     @stuff_in_belly = 10 # He's full.
@@ -59,5 +59,3 @@ class Dragon
     end
   end
 end
-
-#VER COMO DISPONIBILIZAR METODOS DAQUI P// OUTRO MODEL.
