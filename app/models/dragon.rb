@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Dragon
   attr_accessor :name, :owner_name, :stuff_in_intestine, :stuff_in_belly, :asleep
   def initialize(name, owner_name)

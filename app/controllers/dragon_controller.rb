@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Dragon < ApplicationController
   # def new  #instanciar o dragon fazer as chamadas dos metodos/acoes.
   #  @pet = Dragon.new

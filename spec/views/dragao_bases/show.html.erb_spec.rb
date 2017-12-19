@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'dragao_bases/show', :type => :view do
@@ -8,7 +10,7 @@ RSpec.describe 'dragao_bases/show', :type => :view do
     ))
   end
 
-  it 'renders attributes in <p>' do
+  it 'renders attributes' do
     render
     expect(rendered).to match(/Name/)
     expect(rendered).to match(/Owner Name/)

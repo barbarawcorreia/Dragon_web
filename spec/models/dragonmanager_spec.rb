@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 require 'rspec/expectations'
 
 describe Dragon do
   before(:each) do
-    pet = Dragon.new('Dolly','Babi') # Chama o dragon e o Dragon_manager
+    pet = Dragon.new('Dolly', 'Babi') # Chama o dragon e o Dragon_manager
     @manager = Dragon_manager.new(pet)
   end
 

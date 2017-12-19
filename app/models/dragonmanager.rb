@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class DragonManager
-  def initialize(dragon) # passar o dragon.
+  def initialize(dragon)
     @dragon = dragon
   end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateDragonBases < ActiveRecord::Migration
   def change
     create_table :dragon_bases do |t|
