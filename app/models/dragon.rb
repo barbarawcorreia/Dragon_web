@@ -1,6 +1,6 @@
 class Dragon
-  attr_accessor :name,:owner_name,:stuff_in_intestine,:stuff_in_belly,:asleep
-  def initialize(name,owner_name)
+  attr_accessor :name, :owner_name, :stuff_in_intestine, :stuff_in_belly, :asleep
+  def initialize(name, owner_name)
     @name = name
     @owner_name = owner_name
     @asleep = false
@@ -12,10 +12,10 @@ class Dragon
   def feed
     puts "You feed #{@name}."
     @stuff_in_belly = 10
-    #Move food from belly to instestine.
-    @stuff_in_belly = @stuff_in_belly - 1
-    @stuff_in_intestine = @stuff_in_intestine + 1
-    #Feed to much
+    # Move food from belly to instestine.
+    @stuff_in_belly -= 1
+    @stuff_in_intestine += 1
+    # Feed to much
     if @stuff_in_intestine >= 10
       @stuff_in_intestine = 0
       puts "Whoops! #{@name} had an accident..."
@@ -43,16 +43,15 @@ class Dragon
     if @asleep
       @asleep = false
       puts "#{@name} wakes up slowly."
-      if @stuff_in_belly == 0
-        puts "Estou com fome..Vamos comer?"
-        puts "Pressione 1 para me alimentar..."
+      if @stuff_in_belly.zero?
+        puts "Estou com fome..Vamos comer? \n Pressione 1 to feed me"
       end
     end
   end
 
   def toss
     puts "You toss #{@name} up into the air."
-    #Toss with full intestine
+    # Toss with full intestine
     if @stuff_in_intestine >= 10
       @stuff_in_intestine = 0
       puts "Whoops! #{@name} had an accident..."
