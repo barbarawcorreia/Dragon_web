@@ -8,7 +8,7 @@ RSpec.describe "dragao_bases/edit", :type => :view do
     ))
   end
 
-  it "renders the edit dragao_base form" do
+  it 'renders the edit dragao_base form' do
     render
 
     assert_select "form[action=?][method=?]", dragao_base_path(@dragao_base), "post" do

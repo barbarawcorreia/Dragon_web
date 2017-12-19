@@ -30,7 +30,7 @@ describe Dragon do
   end
 
   it 'should rock the baby dragon and test variable asleep' do
-   @pet.rock
+    @pet.rock
     expect(@pet.asleep).to eq(false)
   end
   # lembrete : fazer testes dos dragons blue e red.
