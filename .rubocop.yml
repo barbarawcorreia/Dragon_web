@@ -4,6 +4,9 @@ require:
   - rubocop/cop/internal_affairs
   - rubocop-rspec
 
+Documentation:
+  Enabled: false
+
 AllCops:
   Exclude:
     - 'vendor/**/*'
@@ -73,8 +76,14 @@ Metrics/BlockLength:
     - 'spec/**/*.rb'
 
 Metrics/ModuleLength:
-  Exclude:
-    - 'spec/**/*.rb'
+  CountComments: false  # count full line comments?
+  Max: 100
+
+Metrics/LineLength:
+  Max: 150
+
+Metrics/MethodLength:
+  Max: 50
 
 Performance/Caller:
   Exclude:
@@ -85,3 +94,6 @@ RSpec/PredicateMatcher:
 
 RSpec/NestedGroups:
   Max: 7
+
+Style/Encoding:
+  Enabled: false

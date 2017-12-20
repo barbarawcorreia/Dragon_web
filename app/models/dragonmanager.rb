@@ -25,7 +25,7 @@ class DragonManager
     case acao
     when '1'
       @dragon.feed
-      puts 'Estou cheinho..Preciso relaxar!'
+      puts 'Estou cheinho..Preciso relaxar!' # Criar metodos com as mensagens.
       menu
       loop do
         puts 'Pressione 4 para que eu possa cochilar..'
