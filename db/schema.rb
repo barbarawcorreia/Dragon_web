@@ -13,7 +13,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171201162908) do
+ActiveRecord::Schema.define(version: 201_712_011_629_08) do
   create_table 'dragon_bases', force: :cascade do |t|
     t.string   'name'
     t.string   'owner_name'

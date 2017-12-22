@@ -38,10 +38,9 @@ class Dragon
     puts "You put #{@name} to bed."
     @asleep = true
     3.times do
-      if @asleep
-        puts "#{@name} snores,filling the room with smoke.\n\n"
-      end
+      puts "#{@name} snores,filling the room with smoke.\n\n" if @asleep
     end
+
     if @asleep
       @asleep = false
       puts "#{@name} wakes up slowly."

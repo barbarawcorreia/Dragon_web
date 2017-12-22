@@ -2,11 +2,11 @@
 
 require 'rails_helper'
 
-RSpec.describe "dragao_bases/new", :type => :view do
+RSpec.describe 'dragao_bases/new', type: :view do
   before(:each) do
     assign(:dragao_base, DragaoBase.new(
-      :name => 'MyString',
-      :owner_name => 'MyString'
+    name: 'MyString',
+    owner_name: 'MyString'
     ))
   end
 

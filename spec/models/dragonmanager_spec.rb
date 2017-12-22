@@ -9,7 +9,7 @@ describe Dragon do
     @manager = Dragon_manager.new(pet)
   end
 
-  it 'Should test recursivo method' do
+  it 'will test recursivo method' do
     acao = '1'
     @manager.recursivo(acao)
     expect(@manager.recursivo).to respond_to(acao)

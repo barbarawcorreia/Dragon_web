@@ -48,7 +48,7 @@ RSpec.describe DragaoBasesController, type: :controller do
   describe 'GET show' do
     it 'assigns the requested dragao_base as @dragao_base' do
       dragao_base = DragaoBase.create! valid_attributes
-      get :show, { :id => dragao_base.to_param}, valid_session
+      get :show, { id: dragao_base.to_param }, valid_session
       expect(assigns(:dragao_base)).to eq(dragao_base)
     end
   end
@@ -56,14 +56,14 @@ RSpec.describe DragaoBasesController, type: :controller do
   describe 'GET new' do
     it 'assigns a new dragao_base as @dragao_base' do
       get :new, {}, valid_session
-      expect(assigns(:dragao_base)).to be_a_new(DragaoBase)
+      expect(assigns(:dragao_base)).to a_new?(DragaoBase)
     end
   end
 
   describe 'GET edit' do
     it 'assigns the requested dragao_base as @dragao_base' do
       dragao_base = DragaoBase.create! valid_attributes
-      get :edit, { :id => dragao_base.to_param}, valid_session
+      get :edit, { id: dragao_base.to_param }, valid_session
       expect(assigns(:dragao_base)).to eq(dragao_base)
     end
   end
@@ -72,31 +72,31 @@ RSpec.describe DragaoBasesController, type: :controller do
     describe 'with valid params' do
       it 'creates a new DragaoBase' do
         expect do
-          post :create, { :dragao_base => valid_attributes}, valid_session
+          post :create, { dragao_base: valid_attributes }, valid_session
         end.to change(DragaoBase, :count).by(1)
       end
 
       it 'assigns a newly created dragao_base as @dragao_base' do
-        post :create, { :dragao_base => valid_attributes}, valid_session
-        expect(assigns( :dragao_base)).to be_a(DragaoBase)
-        expect(assigns( :dragao_base)).to be_persisted
+        post :create, { dragao_base: valid_attributes }, valid_session
+        expect(assigns(:dragao_base)).to is_a?(DragaoBase)
+        expect(assigns(:dragao_base)).to persisted?
       end
 
       it 'redirects to the created dragao_base' do
-        post :create, { :dragao_base => valid_attributes}, valid_session
+        post :create, { dragao_base: valid_attributes }, valid_session
         expect(response).to redirect_to(DragaoBase.last)
       end
     end
 
     describe 'with invalid params' do
       it 'assigns a newly created but unsaved dragao_base as @dragao_base' do
-        post :create, { :dragao_base => invalid_attributes}, valid_session
-        expect(assigns( :dragao_base)).to be_a_new(DragaoBase)
+        post :create, { dragao_base: invalid_attributes }, valid_session
+        expect(assigns(:dragao_base)).to a_new?(DragaoBase)
       end
 
       it 're-renders the "new" template' do
-        post :create, { :dragao_base => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
+        post :create, { dragao_base: invalid_attributes }, valid_session
+        expect(response).to render_template('new')
       end
     end
   end
@@ -109,20 +109,20 @@ RSpec.describe DragaoBasesController, type: :controller do
 
       it 'updates the requested dragao_base' do
         dragao_base = DragaoBase.create! valid_attributes
-        put :update, { :id => dragao_base.to_param, :dragao_base => new_attributes}, valid_session
+        put :update, { id: dragao_base.to_param, dragao_base: new_attributes }, valid_session
         dragao_base.reload
         skip('Add assertions for updated state')
       end
 
       it 'assigns the requested dragao_base as @dragao_base' do
         dragao_base = DragaoBase.create! valid_attributes
-        put :update, { :id => dragao_base.to_param, :dragao_base => valid_attributes}, valid_session
+        put :update, { id: dragao_base.to_param, dragao_base: valid_attributes }, valid_session
         expect(assigns(:dragao_base)).to eq(dragao_base)
       end
 
       it 'redirects to the dragao_base' do
         dragao_base = DragaoBase.create! valid_attributes
-        put :update, { :id => dragao_base.to_param, :dragao_base => valid_attributes}, valid_session
+        put :update, { id: dragao_base.to_param, dragao_base: valid_attributes }, valid_session
         expect(response).to redirect_to(dragao_base)
       end
     end
@@ -130,14 +130,14 @@ RSpec.describe DragaoBasesController, type: :controller do
     describe 'with invalid params' do
       it 'assigns the dragao_base as @dragao_base' do
         dragao_base = DragaoBase.create! valid_attributes
-        put :update, { :id => dragao_base.to_param, :dragao_base => invalid_attributes}, valid_session
+        put :update, { id: dragao_base.to_param, dragao_base: invalid_attributes }, valid_session
         expect(assigns(:dragao_base)).to eq(dragao_base)
       end
 
       it 're-renders the "edit" template' do
         dragao_base = DragaoBase.create! valid_attributes
-        put :update, { :id => dragao_base.to_param, :dragao_base => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
+        put :update, { id: dragao_base.to_param, dragao_base: invalid_attributes }, valid_session
+        expect(response).to render_template('edit')
       end
     end
   end
@@ -146,15 +146,14 @@ RSpec.describe DragaoBasesController, type: :controller do
     it 'destroys the requested dragao_base' do
       dragao_base = DragaoBase.create! valid_attributes
       expect do
-        delete :destroy, { :id => dragao_base.to_param}, valid_session
+        delete :destroy, { id: dragao_base.to_param }, valid_session
       end.to change(DragaoBase, :count).by(-1)
     end
 
     it 'redirects to the dragao_bases list' do
       dragao_base = DragaoBase.create! valid_attributes
-      delete :destroy, {:id => dragao_base.to_param}, valid_session
+      delete :destroy, { id: dragao_base.to_param }, valid_session
       expect(response).to redirect_to(dragao_bases_url)
     end
   end
-
 end
