@@ -6,7 +6,7 @@ RSpec.describe 'dragao_bases/edit', type: :view do
   before(:each) do
     @dragao_base = assign(:dragao_base, DragaoBase.create!(
       name: 'MyString',
-      owner_name: 'MyString' ################################################
+      owner_name: 'MyString'
     ))
   end
 

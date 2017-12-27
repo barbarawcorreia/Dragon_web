@@ -1,0 +1,10 @@
+<!-- quando der o submit, faz o create passar esse name e owner_name pro controller com params['hash']-->
+
+<%=form_for @dragon do |f| %>
+  Dragon Baby Name: <%= f.text_field :name %><br/>
+  Your Name: <%= f.text_field :owner_name %><br/>
+  <%= f.submit %>
+<% end %>
+
+<!-- Criar um link para a page play. -->
+

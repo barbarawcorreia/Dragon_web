@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class DragonBase < ActiveRecord::Base
+class Tamagoshi < ActiveRecord::Base
   validates :name, presence: true
   validates :owner_name, presence: true
 end
