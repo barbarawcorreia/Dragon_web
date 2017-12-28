@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   get '/tamagoshis/play' => 'tamagoshi#play', as: 'play' # ordem de chamada. chamar os metodos pra essa view:play.html.erb
 
   get '/tamagoshis/:id' => 'tamagoshi#show', as: 'exibicao' # colocando o prefix exibicao_path no controller
-  # get '/tamagoshis/index' => 'tamagoshi#index', as: 'exibe_todos'
+
+
 end
