@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class TamagoshiController < ApplicationController
+
   def new
     @dragon = Tamagoshi.new
   end
@@ -8,12 +9,12 @@ class TamagoshiController < ApplicationController
   def create
     @dragon = Tamagoshi.new(dragon_params)
     if @dragon.save
-    redirect_to exibicao_path(@dragon.id)
+      redirect_to exibicao_path(@dragon.id)
     end
   end
 
   def show
-    @dragon = Tamagoshi.find(params[:id])
+    @dragon = Tamagoshi.find(params[:id]) # ou @dragon.id
   end
 
   def index
