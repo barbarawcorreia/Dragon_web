@@ -1,4 +1,12 @@
 <!-- ETAPA DO JOGO -->
 <p>
-  Testaaaaaando :P
+  What would you like to do with your Baby Dragon ?
 </p>
+
+<%= link_to "FEED", comida_path(@dragon) %>
+<%= link_to "PUT TO BED", put_to_bed_path(@dragon) %>
+
+<%= link_to "ROCK", rock_path(@dragon) %>
+
+<%= link_to "TOSS", toss_path(@dragon) %>
+<%= flash_message %>

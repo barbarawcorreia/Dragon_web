@@ -27,6 +27,10 @@ class TamagoshiController < ApplicationController
     redirect_to tamagoshis_path
   end
 
+  def play
+    @dragon = Tamagoshi.find(params[:id])
+  end
+
   private
   def dragon_params
     params.require(:tamagoshi).permit(:name, :owner_name)
