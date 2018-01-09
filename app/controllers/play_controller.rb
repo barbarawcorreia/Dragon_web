@@ -5,32 +5,32 @@ class PlayController < ActionController::Base
 
   def feed
     @manager.feed
-    # if @manager.feed
-    #   flash[:notice] = "Your Baby Dragon has been feeded."
-    # else
-    #   flash[:error] = "Your Baby Dragon hasn't been feeded."
-    # end
+    if @manager.feed
+      flash[:notice] = "Your Baby Dragon has been feeded."
+    else
+      flash[:error] = "Your Baby Dragon hasn't been feeded."
+    end
     redirect_to play_path(params[:id])
   end
 
   def rock
     @manager.rock
     if @manager.rock
-      redirect_to play_path(params[:id])
       flash[:notice] = "Your Baby Dragon has been rocked."
     else
       flash[:error] = "Your Baby Dragon hasn't been rocked."
     end
+    redirect_to play_path(params[:id])
   end
 
   def put_to_bed
     @manager.put_to_bed
     if @manager.put_to_bed
-      redirect_to play_path(params[:id])
       flash[:notice] = "Your Baby Dragon has been put to bed."
     else
       flash[:error] = "Your Baby Dragon hasn't been put to bed."
     end
+    redirect_to play_path(params[:id])
   end
 
   def toss
@@ -41,6 +41,7 @@ class PlayController < ActionController::Base
     else
       flash[:error] = "Your Baby Dragon hasn't been tossed."
     end
+    redirect_to play_path(params[:id])
   end
 
   private
