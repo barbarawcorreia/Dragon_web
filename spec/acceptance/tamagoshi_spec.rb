@@ -1,14 +1,9 @@
 require "rails_helper"
 
-# before { visit '/tamagoshis', click_buttom '/tamagoshis/new' }
-
-describe 'bla' do
-  context 'initial page' do
-    it 'should permit users start the game, creating  the dragon' do
-      visit '/tamagoshis'
-      click_link (['/tamagoshis/new'])
-      # expect('/tamagoshis/new').to have('')
-      page.status_code.should eq(200)
-    end
+context 'initial page' do
+  it 'should allow users to start the game, to create the dragon' do
+    visit '/tamagoshis'
+    click_button('CREATE YOUR BABY DRAGON')
+    expect(page.status_code).to eq(200)
   end
 end
