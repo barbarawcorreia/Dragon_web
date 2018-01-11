@@ -2,6 +2,9 @@
 
 class TamagoshiController < ApplicationController
 
+  def start
+  end
+
   def new
     @dragon = Tamagoshi.new
   end
