@@ -37,6 +37,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    archive-zip (0.7.0)
+      io-like (~> 0.3.0)
     arel (6.0.4)
     ast (2.3.0)
     binding_of_caller (0.7.3)
@@ -50,6 +52,15 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
+    capybara-selenium (0.0.6)
+      capybara
+      selenium-webdriver
+    childprocess (0.8.0)
+      ffi (~> 1.0, >= 1.0.11)
+    chromedriver-helper (1.1.0)
+      archive-zip (~> 0.7.0)
+      nokogiri (~> 1.6)
+    coderay (1.1.2)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -64,10 +75,15 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    geckodriver-helper (0.0.4)
+      archive-zip (~> 0.7.0)
+    geckodriver-helper-custom (0.1.2)
+      archive-zip (~> 0.7.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
+    io-like (0.3.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -81,6 +97,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
@@ -91,6 +108,9 @@ GEM
     parser (2.4.0.2)
       ast (~> 2.3)
     powerpack (0.1.1)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     public_suffix (3.0.0)
     rack (1.6.8)
     rack-test (0.6.3)
@@ -151,6 +171,7 @@ GEM
     rubocop-rspec (1.21.0)
       rubocop (>= 0.52.0)
     ruby-progressbar (1.9.0)
+    rubyzip (1.2.1)
     sass (3.5.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -165,6 +186,9 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    selenium-webdriver (3.8.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     sprockets (3.7.1)
@@ -200,15 +224,21 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
+  capybara-selenium
+  chromedriver-helper
   coffee-rails (~> 4.1.0)
+  geckodriver-helper (~> 0.0.4)
+  geckodriver-helper-custom (~> 0.1.2)
   jbuilder (~> 2.0)
   jquery-rails
+  pry
   rails (= 4.2.8)
   rake (< 11.0)
   rspec-rails (~> 3.1.0)
   rubocop-rspec
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  selenium-webdriver (~> 3.8.0)
   spring
   sqlite3
   turbolinks

@@ -18,6 +18,9 @@ gem 'rake', '< 11.0'
 gem 'rspec-rails', '~> 3.1.0'
 gem 'rubocop-rspec'
 
+# Selenium
+# gem 'capybara-webkit'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster.
@@ -42,6 +45,12 @@ group :development, :test do
   # and get a debugger console
   gem 'byebug'
   gem 'capybara'
+  gem 'capybara-selenium'
+  gem 'chromedriver-helper'
+  gem 'pry'
+  gem 'selenium-webdriver', '~> 3.8.0'
+  gem 'geckodriver-helper-custom', '~> 0.1.2'
+  gem 'geckodriver-helper', '~> 0.0.4'
 end
 
 group :development do
