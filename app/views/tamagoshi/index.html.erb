@@ -1,8 +1,9 @@
 <center><h1>Your Baby Dragons ... </h1> </center>
 
-<% @dragon.each do |dragon| %>
+<% @dragons.each do |dragon| %>
 <tr>
   <td><%= dragon.name %></td><p>
   <td><%= dragon.owner_name %></td></p>
+  <td><%= link_to 'Destroy', destroy_path(dragon), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
 <% end %>

@@ -17,17 +17,20 @@ class TamagoshiController < ApplicationController
   end
 
   def show
-    @dragon = Tamagoshi.find(params[:id]) # ou @dragon.id
+    @dragon = Tamagoshi.find(params[:id]) # ou @dragon.id params[:id]
   end
 
   def index
-    @dragon = Tamagoshi.all
+    @dragons = Tamagoshi.all
   end
 
   def destroy
     @dragon = Tamagoshi.find(params[:id])
-    @dragon.destroy
-    redirect_to tamagoshis_path
+
+    if @dragon.present?
+      @dragon.destroy
+    end
+    redirect_to exibe_todos_path
   end
 
   def play

@@ -22,4 +22,6 @@ Rails.application.routes.draw do
 
   get '/tamagoshis/index' => 'tamagoshi#index', as: 'exibe_todos'
 
+  delete '/tamagoshis/:id' => 'tamagoshi#destroy', as: 'destroy'
+
 end
